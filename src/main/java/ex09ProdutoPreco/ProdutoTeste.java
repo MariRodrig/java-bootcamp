@@ -1,0 +1,34 @@
+package ex09ProdutoPreco;
+
+//  Crie uma classe chamada Produto com os atributos nome (String) e preco (double).
+//  Na classe principal, faça um laço for que repita 3 vezes.
+//  A cada repetição, o programa deve usar o Scanner para perguntar o nome e o preço de um produto.
+//  Instancie um novo Produto e guarde nele os valores digitados.
+//  Logo em seguida, faça um if: se o preço do produto for maior que 100, imprima "Produto caro!". Se for menor ou igual, imprima "Produto com preço acessível!". Use printf para mostrar o valor.
+
+import java.util.Scanner;
+
+public class ProdutoTeste {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        double limitePreco = 100;
+
+        for (int i = 0; i < 3; i++) {
+            Produto produto = new Produto();
+            System.out.print("Digite o nome do produto: ");
+            produto.nome = sc.nextLine();
+
+            System.out.print("Digite o preço do produto: ");
+            produto.preco = sc.nextDouble();
+            sc.nextLine();
+
+            if (produto.preco > limitePreco) {
+                System.out.printf("%s no valor de R$: %.2f -  Produto caro!%n", produto.nome, produto.preco);
+            } else {
+                System.out.printf("%s no valor R$: %.2f - Produto com preço acessível!%n", produto.nome, produto.preco);
+            }
+        }
+        sc.close();
+    }
+}
