@@ -17,7 +17,7 @@ public class RestoDivisao {
             int resto = 100 % num;
             System.out.println("O resto da divisão é: " + resto);
 
-        } catch (DivisaoPorZero e) {
+        } catch (ArithmeticException e) {
             System.out.println("Não é possível dividir por zero. Digite um número válido.");
         }
     }
