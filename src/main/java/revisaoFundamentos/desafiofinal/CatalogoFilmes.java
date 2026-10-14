@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class CatalogoFilmes {
 
-    Scanner sc = new Scanner(System.in);
-
     Filme[] filmes = new Filme[5];
     int total = 0;
 
